@@ -1,25 +1,19 @@
 import React from "react";
-
-
 import Helmet from "../components/Helmet/Helmet";
-
 import { Container, Row, Col } from "reactstrap";
-import VoitureForm from "../components/UI/VoitureForm";
-
-
-import carData from "../assets/data/carData";
-import CarItem from "../components/UI/VoitureItem";
+import ClientForm from "../components/UI/ClientForm";
 
 
 
 
 
 const Home = () => {
+
   return (
     <Helmet title="Gestion des Locataire">
-     
+
       <section className="p-0 hero__slider-section">
-       
+
 
         <div className="hero__form">
           <Container>
@@ -31,15 +25,18 @@ const Home = () => {
               </Col>
 
               <Col lg="8" md="8" sm="12">
-                <VoitureForm />
+                <ClientForm />
+
               </Col>
             </Row>
           </Container>
         </div>
       </section>
-      
-      
-      {/* =========== affichage des voitures  ============= */}
+
+
+
+      {/* =========== affichage des voitures en option sur la premiere page  ============= */}
+      {/*
       <section>
         <Container>
           <Row>
@@ -54,7 +51,7 @@ const Home = () => {
           </Row>
         </Container>
       </section>
-     
+     */}
     </Helmet>
   );
 };

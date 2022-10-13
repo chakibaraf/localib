@@ -7,6 +7,7 @@ import img05 from "../images/cars-img/mercedes-offer.png";
 
 const carData = [
   {
+    
     id: 1,
     brand: "Nissan",
     carName: "Renault",
@@ -17,8 +18,8 @@ const carData = [
     gps: "GPS Navigation",
     seatType: "Heated seats",
     automatic: "Automatique",
-   
-  },
+    },
+  
 
  
 
@@ -57,6 +58,7 @@ const carData = [
     automatic: "Automatique",
     
   },
+
   
 ];
 
