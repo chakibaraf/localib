@@ -80,7 +80,7 @@ const ClientForm = () => {
         {dataCust.map((item) => {
           return (
             <clientInfo
-            txt={item.brand}
+            txt={item.id}
             key={item.id}
             id={item.id}
             delfunc={delateClt}

@@ -10,7 +10,7 @@ import VoitureInfo from './VoitureInfo';
 
 
 const VoitureFormGestionVehicule = () => {
-  const [dataArr, setDatarr] = useState([carData])
+  const [dataArr, setDatarr] = useState(carData)
 
   /* un usestate vide pour gerer mon   input */
   const [stateInput, setInput] = useState();
@@ -34,7 +34,7 @@ const VoitureFormGestionVehicule = () => {
     e.preventDefault();
     const newarr = [...dataArr];
     const newtodo = {};
-    newtodo.txt = stateInput;
+    newtodo.brand = stateInput;
     newtodo.id = uuidv4();
     newarr.push(newtodo);
 
