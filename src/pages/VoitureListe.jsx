@@ -5,7 +5,9 @@ import Helmet from "../components/Helmet/Helmet";
 import VoitureItem from "../components/UI/VoitureItem";
 import CarData from "../assets/data/carData";
 
-const VoitureListe = () => {
+const VoitureListe = (props) => {
+ // const [stateVoit,setVoit] = useState(CarData)
+
   return (
     <Helmet title="Gestion des locations">
    
@@ -28,7 +30,10 @@ const VoitureListe = () => {
             </Col>
 
             {CarData.map((item) => (
-              <VoitureItem item={item} key={item.id} />
+              <VoitureItem 
+              item={item} 
+              key={item.id}
+               />
             ))}
           </Row>
         </Container>
