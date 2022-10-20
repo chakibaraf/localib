@@ -12,7 +12,7 @@ const BookingForm = () => {
         <input type="text" placeholder="Nom" />
       </FormGroup>
       <FormGroup className="booking__form d-inline-block ms-1 mb-4">
-        <input type="text" placeholder="Prenom" />
+        <input type="text" placeholder="Prénom" />
       </FormGroup>
 
       <FormGroup className="booking__form d-inline-block me-4 mb-4">
@@ -49,7 +49,10 @@ const BookingForm = () => {
       </FormGroup>
 
       <FormGroup className="booking__form d-inline-block me-4 mb-4">
-        <input type="date" placeholder="la date " />
+       date de départ  <input type="date" placeholder="" />
+      </FormGroup>
+      <FormGroup className="booking__form d-inline-block me-4 mb-4">
+        date de fin <input type="date" placeholder="la date de fin" />
       </FormGroup>
       <FormGroup className="booking__form d-inline-block ms-1 mb-4">
         <input

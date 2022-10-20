@@ -7,6 +7,7 @@ const CustomerData = [
       prenom: "jacques",
       email: "fj@gmail.com",
       adresse: "rue des olivier",
+      date: ""
       
      
     },
@@ -15,8 +16,9 @@ const CustomerData = [
       id:uuidv4(),
       nom: "francois",
       prenom: "jacques",
-      email: "fj@gmail.com",
+      email: "kfkdkf@gmail.com",
       adresse: "rue des olivier",
+      date: ""
       
      
     },
@@ -25,8 +27,9 @@ const CustomerData = [
       id: uuidv4(),
       nom: "francois",
       prenom: "jacques",
-      email: "fj@gmail.com",
+      email: "ffmfmsslls@gmail.com",
       adresse: "rue des olivier",
+      date: ""
      
     },
   
@@ -34,8 +37,9 @@ const CustomerData = [
       id:uuidv4(),
       nom: "francois",
       prenom: "jacques",
-      email: "fj@gmail.com",
+      email: "mffmmf@gmail.com",
       adresse: "rue des olivier",
+      date: ""
           
     },
     

@@ -21,6 +21,7 @@ const ClientForm = () => {
   const [statePrenom, setPrenom] = useState();
   const [stateEmail, setEmail] = useState();
   const [stateAdresse, setAdresse] = useState();
+  const [stateDate, setDate] = useState();
 
   /* prends en parametre l'id utiliser la methode filter pour chaque element de 
   dataArr (item prends l'inverse de id donc rien (creer un nouveau tableau))
@@ -47,6 +48,9 @@ const ClientForm = () => {
   const linkedAdresse = (e) => {
     setAdresse(e);
   }
+  const linkedDate = (e) => {
+    setImmediate(e);
+  }
   
   const addClts = (e) => {
     e.preventDefault();
@@ -57,6 +61,7 @@ const ClientForm = () => {
     newClt.prenom = statePrenom;
     newClt.email = stateEmail;
     newClt.adresse = stateAdresse;
+    newClt.date = stateDate;
     //newClt.ext = stateChamps;
 
     newClt.id = uuidv4();
@@ -69,6 +74,7 @@ const ClientForm = () => {
     setPrenom('');
     setEmail('');
     setAdresse('');
+    setDate('');
 
     console.log(dataCust);
   }
@@ -93,7 +99,7 @@ const ClientForm = () => {
         </FormGroup>
 
         <FormGroup className="form__group">
-          <input type="date" placeholder="date" required />
+          <input  value={stateDate} onInput={e => linkedDate(e.target.value)} type="date" placeholder="date" required />
         </FormGroup>
        
           <FormGroup className="form__group">
@@ -110,6 +116,7 @@ const ClientForm = () => {
             info2={item.prenom}
             info3={item.email}
             info4={item.adresse}
+            info5={item.date}
             key={item.id}
             id={item.id}
             delfunc={delateClt}
