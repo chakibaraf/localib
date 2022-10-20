@@ -7,7 +7,7 @@ import CarData from "../assets/data/carData";
 
 const VoitureListe = () => {
   return (
-    <Helmet title="Voiture">
+    <Helmet title="Gestion des locations">
    
 
       <section>

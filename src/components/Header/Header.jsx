@@ -16,7 +16,7 @@ const navLinks = [
   },
   {
     path: "/VoitureListe",
-    display: "Voitures ",
+    display: "Gestion des locations ",
   },
 
  

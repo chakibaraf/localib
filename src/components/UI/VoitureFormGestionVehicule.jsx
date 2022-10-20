@@ -10,10 +10,16 @@ import VoitureInfo from './VoitureInfo';
 
 
 const VoitureFormGestionVehicule = () => {
+  /** marque */
   const [dataArr, setDatarr] = useState(carData)
 
+
+
   /* un usestate vide pour gerer mon   input */
-  const [stateInput, setInput] = useState();
+  const [stateMarque, setMarque] = useState();
+  const [stateModel, setModel] = useState();
+  const [stateImmatriculation, setImmatriculation] = useState();
+  const [stateAnnee, setAnnee] = useState();
 
   /* prends en parametre l'id utiliser la methode filter pour chaque element de 
   dataArr (item prends l'inverse de id donc rien (creer un nouveau tableau))
@@ -27,64 +33,96 @@ const VoitureFormGestionVehicule = () => {
     setDatarr(filter)
   }
   /* linkedinput permet de lier mon input avec ce que j'ai envie d'ecrire */
-  const linkedinput = (e) => {
-    setInput(e);
+  const linkedMarque = (e) => {
+    setMarque(e);
+
   }
-  const addtodo = (e) => {
+  const linkedModel = (e) => {
+    setModel(e);
+  }
+  const linkedImmatriculation = (e) => {
+    setImmatriculation(e);
+  }
+  const linkedAnnee = (e) => {
+    setAnnee(e);
+  }
+  const addVehicule = (e) => {
     e.preventDefault();
     const newarr = [...dataArr];
-    const newtodo = {};
-    newtodo.brand = stateInput;
-    newtodo.id = uuidv4();
-    newarr.push(newtodo);
+    const newVehicule = {};
+
+   
+
+    newVehicule.brand = stateMarque;
+    newVehicule.carName = stateModel;
+    newVehicule.immat = stateImmatriculation;
+  
+  
+   newVehicule.annee = stateAnnee;
+    
+
+    newVehicule.id = uuidv4();
+   
+
+    newarr.push(newVehicule);
+   
+
 
     console.log(newarr);
 
     setDatarr(newarr);
-    setInput('');
+    stateMarque('');
+    stateModel('');
+    stateImmatriculation('');
+    stateAnnee('');
 
     console.log(dataArr);
   }
   return (
     <div>
 
-      <Form onSubmit={e => addtodo(e)} className="form">
+      <Form onSubmit={e => addVehicule(e)} className="form">
         <div className=" d-flex align-items-center justify-content-between flex-wrap">
           <FormGroup className="form__group">
-            <input value={stateInput} onInput={e => linkedinput(e.target.value)}
+            <input value={stateMarque} onInput={e => linkedMarque(e.target.value)}
               type="text" placeholder="Marque" required />
           </FormGroup>
           <FormGroup className="form__group">
-            <input   type="text" placeholder="Model" required />
+            <input value={stateModel} onInput={e => linkedModel(e.target.value)} type="text" placeholder="Model" required />
           </FormGroup>
 
           <FormGroup className="form__group">
-            <input   type="text" placeholder="immatriculation" required />
+            <input value={stateImmatriculation} onInput={e => linkedImmatriculation(e.target.value)} type="text" placeholder="immatriculation" required />
           </FormGroup>
           <FormGroup className="form__group">
-            <input  type="text" placeholder="année" required />
+            <input value={stateAnnee} onIput={e => linkedAnnee(e.target.value)} type="text" placeholder="année" required />
           </FormGroup>
-
-          
-
           <FormGroup className="form__group">
             <button className="btn find__car-btn">Enregistrement  </button>
           </FormGroup>
         </div>
       </Form>
-      <ul className='list-group'>
+
+      <div>
+        
         {dataArr.map((item) => {
           return (
             <VoitureInfo
-              txt={item.brand}
-              key={item.id}
-              id={item.id}
-              delfunc={delate}
+            txt={item.brand}
+            txt1={item.carName}
+            txt2={item.immat}
+            txt3={item.annee}
+            id={item.id}
+            key={item.id}
+            
+            delfunc={delate}
+            
             />
-          )
-        })}
-      </ul>
-    </div>
+            )
+          })}
+          
+          </div>
+      </div>
 
   );
 };
