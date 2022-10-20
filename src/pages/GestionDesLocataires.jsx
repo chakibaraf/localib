@@ -7,6 +7,7 @@ import ClientForm from "../components/UI/ClientForm";
 
 
 
+
 const Home = () => {
 
   return (
@@ -26,6 +27,7 @@ const Home = () => {
 
               <Col lg="8" md="8" sm="12">
                 <ClientForm />
+                
 
               </Col>
             </Row>
