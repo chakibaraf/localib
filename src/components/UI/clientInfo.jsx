@@ -11,7 +11,8 @@ export default function ClientInfo (props){
                 <button className="btn btn-danger p-2 h-50"
                 /* inject la methode delate dans le bouton avec props et l'id */
                 onClick={()=>props.delfunc(props.id)}
-                >supprimer</button>
+                >supprimer</button> 
+                
                 
                  
             </li>
