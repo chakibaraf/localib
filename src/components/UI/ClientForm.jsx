@@ -5,7 +5,7 @@ import "../../styles/find-car-form.css";
 import "../../styles/find-car-form.css";
 import { Form, FormGroup } from "reactstrap";
 import CustomerData from "../../assets/data/CustomerData";
-import ClientInfo from './ClientInfo';
+import ClientInfos from './ClientInfos';
 
 
 
@@ -111,7 +111,7 @@ const ClientForm = () => {
       <ul className='list-group'>
         {dataCust.map((item) => {
           return (
-            <ClientInfo
+            <ClientInfos
             info1={item.nom}
             info2={item.prenom}
             info3={item.email}
